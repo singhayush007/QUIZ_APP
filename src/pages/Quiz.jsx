@@ -62,31 +62,21 @@
 //   const isLastQuestion = questionIndex === quiz.length - 1;
 
 //   const handleSaveAnswer = (isCorrect) => {
-//     setAnswers([...answers, { question: questionIndex, isCorrect }]);
-//     if (isCorrect) setScore(score + 1);
+//     setAnswers(prev => [...prev, { question: questionIndex, isCorrect }]);
+//     if (isCorrect) setScore(prev => prev + 1);
 
 //     if (questionIndex + 1 < quiz.length) {
-//       setQuestionIndex(questionIndex + 1);
+//       setQuestionIndex(prev => prev + 1);
 //       setTimeLeft(10);
 //     } else {
 //       setQuizDone(true);
 //     }
 //   };
 
-//   // const submitQuiz = (isCorrect) => {
-//   //   handleSaveAnswer(isCorrect);
-//   //   setQuizDone(true);
-//   // };
-
-// const submitQuiz = (isCorrect) => {
-//   if (typeof handleSaveAnswer === "function") {
+//   const submitQuiz = (isCorrect) => {
 //     handleSaveAnswer(isCorrect);
-//   } else {
-//     console.error("handleSaveAnswer is not a function!");
-//   }
-//   setQuizDone(true);
-// };
-
+//     setQuizDone(true);
+//   };
 
 //   useEffect(() => {
 //     if (quizDone) return;
@@ -141,8 +131,7 @@
 //               <div className="w-full space-y-4">
 //                 {quiz.map((q, i) => {
 //                   const userAnswer = answers[i];
-//                   let chipClass =
-//                     "inline-block px-3 py-1 rounded-full text-sm font-semibold";
+//                   let chipClass = "inline-block px-3 py-1 rounded-full text-sm font-semibold";
 
 //                   if (userAnswer === undefined) {
 //                     chipClass += " bg-gray-200 text-gray-800"; // Neutral
@@ -198,7 +187,6 @@
 // };
 
 // export default Quiz;
-
 
 
 
@@ -279,10 +267,10 @@ const Quiz = () => {
 
   const handleSaveAnswer = (isCorrect) => {
     setAnswers(prev => [...prev, { question: questionIndex, isCorrect }]);
-    if (isCorrect) setScore(prev => prev + 1);
+    if (isCorrect) setScore(prevScore => prevScore + 1);
 
     if (questionIndex + 1 < quiz.length) {
-      setQuestionIndex(prev => prev + 1);
+      setQuestionIndex(questionIndex + 1);
       setTimeLeft(10);
     } else {
       setQuizDone(true);
@@ -291,7 +279,7 @@ const Quiz = () => {
 
   const submitQuiz = (isCorrect) => {
     handleSaveAnswer(isCorrect);
-    setQuizDone(true);
+    // Do NOT call setQuizDone here, handleSaveAnswer manages it
   };
 
   useEffect(() => {
@@ -347,7 +335,8 @@ const Quiz = () => {
               <div className="w-full space-y-4">
                 {quiz.map((q, i) => {
                   const userAnswer = answers[i];
-                  let chipClass = "inline-block px-3 py-1 rounded-full text-sm font-semibold";
+                  let chipClass =
+                    "inline-block px-3 py-1 rounded-full text-sm font-semibold";
 
                   if (userAnswer === undefined) {
                     chipClass += " bg-gray-200 text-gray-800"; // Neutral
@@ -376,24 +365,16 @@ const Quiz = () => {
                         ) : (
                           <FaTimesCircle className="text-[#FF9D33] mr-2" />
                         )}
-                        <span className="text-sm">Correct Answer: {q.answer}</span>
+                        <p>{q.explanation}</p>
                       </div>
-
-                      <Label className="text-sm text-gray-600 mt-1">Explanation: {q.explanation}</Label>
-                      <Label className="text-xs text-gray-500 mt-1">Difficulty: {q.difficulty}</Label>
                     </div>
                   );
                 })}
               </div>
 
-              <AnimatedNumbers
-                transitions={index => ({ type: "spring", duration: index + 0.1 })}
-                animateToNumber={score * 100}
-                fontStyle={{ fontSize: 60 }}
-              />
-              <span className="text-2xl mt-2">Points</span>
-
-              <Link to="/"><Button className="mt-5">Back to Home</Button></Link>
+              <Button className="mt-6" asChild>
+                <Link to="/">Back to Home</Link>
+              </Button>
             </div>
           )}
         </div>
