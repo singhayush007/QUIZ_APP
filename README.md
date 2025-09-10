@@ -74,17 +74,7 @@ npm run dev
 
 3. 📸 Screenshots
 
-### Home Page
-![Home Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/home.png)
-
-
-### Quiz Page
-![Quiz Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/quiz.png)
-
-
-### Result Page
-![Result Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/result.png)
-
+Check out the Screenshots in src/assets folder.
 
 
 ## 📝 Usage
