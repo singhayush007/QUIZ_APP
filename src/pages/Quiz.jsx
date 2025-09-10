@@ -73,10 +73,20 @@ const Quiz = () => {
     }
   };
 
-  const submitQuiz = (isCorrect) => {
+  // const submitQuiz = (isCorrect) => {
+  //   handleSaveAnswer(isCorrect);
+  //   setQuizDone(true);
+  // };
+
+const submitQuiz = (isCorrect) => {
+  if (typeof handleSaveAnswer === "function") {
     handleSaveAnswer(isCorrect);
-    setQuizDone(true);
-  };
+  } else {
+    console.error("handleSaveAnswer is not a function!");
+  }
+  setQuizDone(true);
+};
+
 
   useEffect(() => {
     if (quizDone) return;
