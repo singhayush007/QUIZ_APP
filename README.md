@@ -75,13 +75,16 @@ npm run dev
 3. 📸 Screenshots
 
 ### Home Page
-![Home Page](src/assets/home.png)
+![Home Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/home.png)
+
 
 ### Quiz Page
-![Quiz Page](src/assets/quiz.png)
+![Quiz Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/quiz.png)
+
 
 ### Result Page
-![Result Page](src/assets/result.png)
+![Result Page](https://raw.githubusercontent.com/singhayush007/QUIZ-_APP/main/src/assets/result.png)
+
 
 
 ## 📝 Usage
