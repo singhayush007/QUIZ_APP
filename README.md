@@ -99,5 +99,5 @@ Check out the Screenshots in src/assets folder.
 
 Watch a walkthrough of the app here:
 [Loom Video Link: https://www.loom.com/share/b4e536fdaee04e66a43c699acbd6993f?sid=07635854-88dc-40c2-b73d-50cfdf51fd12]
-[Deployment Link: ]
+[Deployment Link: quiz-app-ecru-chi.vercel.app]
 
