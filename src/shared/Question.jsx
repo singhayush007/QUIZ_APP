@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Label } from "@/components/ui/label";
-import { Button } from '@/components/ui/button';
-import { Separator } from "@/components/ui/separator";
+import { Label } from "../components/ui/label";
+import { Button } from '../components/ui/button';
+import { Separator } from "../components/ui/separator";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-import '@/App.css'; 
+import '../App.css'; 
 
 const Question = (props) => {
   const [answer, setAnswer] = useState('');
