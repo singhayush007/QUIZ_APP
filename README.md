@@ -47,13 +47,32 @@ A modern, interactive quiz application built with **React** and **Tailwind CSS**
 
 QUIZ_APP/
 ├─ src/
-│ ├─ components/ # Button, Card, Label, Progress, Separator
-│ ├─ pages/ # Home, Quiz, Layout, NoPage
-│ ├─ shared/ # Question component
-│ └─ App.jsx # Main app with routing
-├─ public/ # Images, icons
+│  ├─ components/                # Reusable UI components
+│  │  ├─ Button.jsx
+│  │  ├─ Card.jsx
+│  │  ├─ Label.jsx
+│  │  ├─ Progress.jsx
+│  │  └─ Separator.jsx
+│  │
+│  ├─ pages/                     # Application pages
+│  │  ├─ Home.jsx
+│  │  ├─ Quiz.jsx
+│  │  ├─ Layout.jsx
+│  │  └─ NoPage.jsx
+│  │
+│  ├─ shared/                    # Shared components
+│  │  └─ Question.jsx
+│  │
+│  └─ QuizApp.jsx                    # Main app with routing
+│
+├─ public/                       # Static assets
+│  ├─ logo.png
+│  ├─ favicon.ico
+│  └─ banner.jpg
+│
 ├─ package.json
 └─ README.md
+
 
 
 ---
