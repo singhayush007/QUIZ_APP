@@ -1,5 +1,12 @@
 # 🎮 QUIZ_APP
 
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
+![React](https://img.shields.io/badge/Framework-React-blue)
+![TailwindCSS](https://img.shields.io/badge/CSS-Tailwind%20CSS-lightblue)
+![HTML5](https://img.shields.io/badge/HTML5-orange)
+![CSS3](https://img.shields.io/badge/CSS3-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A modern, interactive **quiz application** built with **React** and **Tailwind CSS**, featuring multiple categories, animations, and progress tracking. Designed to provide a smooth, engaging experience for users while testing their knowledge.
 
 ---
@@ -108,5 +115,5 @@ ConfettiExplosion: Fun confetti effect.
 React Router DOM: Client-side routing.
 
 🎥 Demo & Deployment
-Demo Video: Loom Video
-Live Deployment: Quiz App
+Demo Video: https://www.loom.com/share/b4e536fdaee04e66a43c699acbd6993f?sid=037e8ea5-dd8a-4e9c-86b0-e00fdac68622
+Live Deployment: https://quiz-app-rho-red-31.vercel.app/
